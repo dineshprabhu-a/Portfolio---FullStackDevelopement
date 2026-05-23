@@ -1,0 +1,8 @@
+Still need to add:
+- iot-applications.jpg
+- ai-ml-edunet.jpg
+- typewriting.jpg
+- emertxe.png (if you want to add Emertxe certificate)
+
+And in /public/logos/:
+- emertxe.png (company logo)
