@@ -3,9 +3,9 @@ import { useInView } from 'react-intersection-observer';
 import { FiServer, FiDatabase, FiCode } from 'react-icons/fi';
 
 const highlights = [
-  { icon: <FiServer className="text-2xl" />, title: 'Backend Systems', desc: 'Designing robust server-side architectures with Spring Boot' },
-  { icon: <FiDatabase className="text-2xl" />, title: 'Database Design', desc: 'Efficient data modeling with MySQL & PostgreSQL' },
-  { icon: <FiCode className="text-2xl" />, title: 'Clean Code', desc: 'Writing maintainable, well-tested Java applications' },
+  { icon: <FiServer className="text-2xl" />, title: 'Rules Engine Modernization', desc: 'Migrating legacy Perl rules applications to Java-based systems' },
+  { icon: <FiDatabase className="text-2xl" />, title: 'Schema & Integration', desc: 'Designing multi-scope schemas and REST APIs for rule authoring and lifecycle management' },
+  { icon: <FiCode className="text-2xl" />, title: 'Observability & Quality', desc: 'Building metrics logging pipelines with Grafana and maintaining 95%+ unit test coverage' },
 ];
 
 export default function About() {
@@ -29,18 +29,17 @@ export default function About() {
             <div>
               <p className="text-[#64748b] dark:text-[#94a3b8] leading-relaxed text-lg mb-6">
                 I'm <span className="text-[#1e293b] dark:text-[#f8fafc] font-semibold">Dineshprabhu A</span>, a Software Engineer at{' '}
-                <span className="text-[#38bdf8]">Neurealm (formerly GS Lab — GAVS)</span> with a passion for
-                building scalable backend systems. I specialize in Java, Spring Boot, and RESTful APIs.
+                <span className="text-[#38bdf8]">Neurealm (formerly GS Lab — GAVS)</span> with experience modernizing enterprise rules platforms.
+                I specialize in Core Java, Spring Boot, Stream API, and building clean, maintainable backend systems.
               </p>
               <p className="text-[#64748b] dark:text-[#94a3b8] leading-relaxed text-lg mb-6">
-                Currently working on the <span className="text-[#1e293b] dark:text-[#f8fafc] font-semibold">Athenahealth – Rules 2.0 Migration</span> project,
-                where I modernize legacy Perl applications by migrating them to Java. I focus on writing clean,
-                well-tested code with 95%+ test coverage.
+                On the Athenahealth Rules Engine Modernization project, I migrated legacy Perl applications to Java, developed a Java-based DSL engine,
+                and built rule authoring and lifecycle REST APIs with strong observability backed by Grafana.
               </p>
               <p className="text-[#64748b] dark:text-[#94a3b8] leading-relaxed text-lg">
                 I hold a B.E. in Electronics and Communication Engineering from{' '}
                 <span className="text-[#1e293b] dark:text-[#f8fafc]">Anna University (BIT Campus)</span> with a CGPA of 8.26/10.
-                I'm always eager to learn and contribute to impactful projects.
+                I enjoy solving problems, designing robust systems, and writing well-tested code.
               </p>
             </div>
 

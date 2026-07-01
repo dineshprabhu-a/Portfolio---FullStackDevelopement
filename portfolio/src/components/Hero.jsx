@@ -5,15 +5,16 @@ import { SiLeetcode } from 'react-icons/si';
 import { API_BASE } from '../config/api';
 
 const terminalLines = [
-  '> Java Backend Developer',
-  '> Spring Boot Engineer',
-  '> Building scalable REST APIs',
+  '> Software Engineer',
+  '> Rules Engine Modernization',
+  '> Java, Spring Boot, REST APIs',
 ];
 
 export default function Hero() {
   const [displayedLines, setDisplayedLines] = useState([]);
   const [currentLine, setCurrentLine] = useState(0);
   const [currentChar, setCurrentChar] = useState(0);
+  const [isCheckingOffline, setIsCheckingOffline] = useState(false);
 
   useEffect(() => {
     if (currentLine >= terminalLines.length) return;
@@ -38,6 +39,28 @@ export default function Hero() {
     }
   }, [currentLine, currentChar]);
 
+  const handleResumeDownload = async (event) => {
+    event.preventDefault();
+    setIsCheckingOffline(true);
+
+    try {
+      const response = await fetch(`${API_BASE}/api/resume/download`, {
+        method: 'HEAD',
+        cache: 'no-store',
+      });
+
+      if (response.ok) {
+        window.location.href = `${API_BASE}/api/resume/download`;
+      } else {
+        window.location.href = '/resume.pdf';
+      }
+    } catch (error) {
+      window.location.href = '/resume.pdf';
+    } finally {
+      setIsCheckingOffline(false);
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 pb-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -55,7 +78,7 @@ export default function Hero() {
             <span className="text-[#38bdf8]">A</span>
           </h1>
           <p className="text-[#64748b] dark:text-[#94a3b8] text-base md:text-lg mb-6">
-            Software Engineer specializing in Java & Spring Boot
+            Software Engineer with 1+ years modernizing enterprise rules platforms, building Java-based DSL engines and scalable Spring Boot APIs.
           </p>
 
           {/* Terminal */}
@@ -91,14 +114,14 @@ export default function Hero() {
             >
               View Projects <FiArrowRight />
             </a>
-            <a
-              href={`${API_BASE}/api/resume/download`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-[#38bdf8] text-[#38bdf8] px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-[#38bdf8]/10 transition-colors duration-300 text-sm sm:text-base"
+            <button
+              type="button"
+              onClick={handleResumeDownload}
+              disabled={isCheckingOffline}
+              className="inline-flex items-center gap-2 border border-[#38bdf8] text-[#38bdf8] px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-[#38bdf8]/10 transition-colors duration-300 text-sm sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Download Resume <FiDownload />
-            </a>
+              {isCheckingOffline ? 'Checking...' : 'Download Resume'} <FiDownload />
+            </button>
           </div>
 
           {/* Social Links */}
@@ -121,6 +144,7 @@ export default function Hero() {
               </a>
             ))}
           </div>
+
         </motion.div>
 
         {/* Right — Code Illustration */}

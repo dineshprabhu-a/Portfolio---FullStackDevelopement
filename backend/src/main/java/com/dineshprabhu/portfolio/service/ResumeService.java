@@ -5,6 +5,7 @@ import com.dineshprabhu.portfolio.repository.ResumeDownloadRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,12 @@ public class ResumeService {
     }
 
     public Resource getResumeFile() {
-        Resource resource = new FileSystemResource(resumeFilePath);
+        Resource resource;
+        if (resumeFilePath != null && resumeFilePath.startsWith("classpath:")) {
+            resource = new ClassPathResource(resumeFilePath.substring("classpath:".length()));
+        } else {
+            resource = new FileSystemResource(resumeFilePath);
+        }
         if (!resource.exists()) {
             throw new RuntimeException("Resume file not found at: " + resumeFilePath);
         }

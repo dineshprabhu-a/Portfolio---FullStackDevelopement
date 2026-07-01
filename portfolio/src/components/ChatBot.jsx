@@ -10,15 +10,15 @@ const knowledge = [
   },
   {
     patterns: ['your name', 'who are you', 'who is this', 'whose portfolio', 'about you', 'about him', 'tell me about', 'introduce', 'who is dinesh'],
-    response: "This is the portfolio of **Dineshprabhu A**, a Software Engineer specializing in Java & Spring Boot, currently working at Neurealm (formerly GS Lab — GAVS) in Chennai. He has a B.E. in ECE from Anna University BIT Campus with 8.26 CGPA.",
+    response: "This is the portfolio of **Dineshprabhu A**, a Software Engineer specializing in Java & Spring Boot, currently working at Neurealm (formerly GS Lab — GAVS). He brings 1+ year of experience migrating legacy rules platforms to Java and building DSL-based backend systems.",
   },
   {
     patterns: ['skill', 'tech', 'technolog', 'stack', 'what do you know', 'programming', 'language', 'what can', 'java', 'spring', 'tool', 'proficien'],
-    response: "Dineshprabhu's core skills include:\n\n🔹 **Backend**: Java (90%), Spring Boot (85%), REST API (88%), Hibernate (78%)\n🔹 **Database**: MySQL (85%), PostgreSQL (75%), SQL (88%)\n🔹 **DevOps**: Docker (70%), Git (85%), GitHub (90%)\n🔹 **Tools**: IntelliJ IDEA, VS Code, Postman, Jira\n\nHe's strongest in Java backend development and building scalable REST APIs.",
+    response: "Dineshprabhu's core skills include:\n\n🔹 **Languages**: Java, JavaScript, SQL, Perl, HTML/CSS\n🔹 **Frameworks & Technologies**: Spring, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Servlets, JDBC, React\n🔹 **Tools & Platforms**: Git, GitHub, Bitbucket, Jira, Postman, Grafana, OpenSearch, IntelliJ IDEA, Windsurf, MySQL\n\nHe is experienced in OOP, Stream API, REST API design, DSL design, schema design, and writing well-tested code."
   },
   {
     patterns: ['experience', 'work', 'job', 'company', 'career', 'current role', 'where do you work', 'neurealm', 'gavs', 'years of exp', 'how long', 'how many year'],
-    response: "Dineshprabhu's work experience:\n\n🏢 **Software Engineer @ Neurealm (formerly GS Lab — GAVS)** (Mar 2025 – Present)\n📍 Chennai, TN | Full-time\n\n→ Migrating legacy Perl to Java using Core Java Collection Framework & Stream API\n→ 95%+ test coverage with comprehensive unit testing\n→ Bitbucket Git workflows for code reviews & branch merging\n→ Root cause analysis & post-migration testing for system reliability",
+    response: "Dineshprabhu's work experience:\n\n🏢 **Software Engineer @ Neurealm (formerly GS Lab — GAVS)** (Mar 2025 – Present)\n📍 Chennai, TN | Full-time\n\n→ Migrated 15,000+ business rules from Perl to Java using Collections and Stream API\n→ Developed a Java-based DSL engine with 20+ operators and syntax/semantic validation\n→ Built REST APIs for rule authoring, version history, dark-launch deployment, and rollback\n→ Integrated claim-level metrics with Grafana for runtime monitoring\n→ Maintained 95%+ unit test coverage and managed Bitbucket PR workflows",
   },
   {
     patterns: ['education', 'college', 'university', 'degree', 'stud', 'qualification', 'cgpa', 'gpa', 'anna university', 'bit campus', 'ece', 'branch', 'stream'],

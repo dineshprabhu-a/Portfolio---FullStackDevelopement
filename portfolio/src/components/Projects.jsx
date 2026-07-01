@@ -6,37 +6,28 @@ import { FiGithub, FiExternalLink, FiStar, FiGitBranch } from 'react-icons/fi';
 
 const fallbackProjects = [
   {
-    title: 'E-Commerce Backend System',
+    title: 'Developer Portfolio Website',
     description:
-      'A robust RESTful backend for an e-commerce platform with user authentication, product management, cart operations, and order processing.',
-    techStack: 'Java,Spring Boot,MySQL,REST API,Spring Security',
+      'Full-stack portfolio with React frontend, Tailwind UI, and Spring Boot backend supporting contact email, GitHub stats, admin dashboard, dark/light theme, and PWA offline support.',
+    techStack: 'React,Tailwind CSS,Spring Boot,REST API,PWA',
     githubUrl: 'https://github.com/dineshprabhu-a',
-    demoUrl: '#',
-    image: '🛒',
+    demoUrl: 'https://dineshprabhu.vercel.app/',
+    image: '💻',
   },
   {
-    title: 'URL Shortener Application',
+    title: 'Rules Engine Modernization',
     description:
-      'A high-performance URL shortening service with custom aliases, click analytics, and expiration features built with Spring Boot.',
-    techStack: 'Java,Spring Boot,PostgreSQL,REST API,Docker',
+      'Modernized a legacy Perl rules platform by migrating business rules to Java, developing a DSL engine, and building REST APIs with rollback-capable dark-launch deployment.',
+    techStack: 'Java,Spring Boot,DSL,REST API,Grafana',
     githubUrl: 'https://github.com/dineshprabhu-a',
     demoUrl: '#',
-    image: '🔗',
+    image: '⚙️',
   },
   {
-    title: 'Employee Management System',
+    title: 'Elliptic-Curve Secure Communication',
     description:
-      'A full-stack employee management application with CRUD operations, role-based access, department management, and reporting.',
-    techStack: 'Java,Spring Boot,Hibernate,MySQL,REST API',
-    githubUrl: 'https://github.com/dineshprabhu-a',
-    demoUrl: '#',
-    image: '👥',
-  },
-  {
-    title: 'Secure Healthcare Communication',
-    description:
-      'Encrypted data transfer system for healthcare using ECDH key exchange and AES encryption. Published in IJNRD journal.',
-    techStack: 'Java,JDBC,MySQL,Apache Server,Cryptography',
+      'Secure patient-doctor communication system using ECDH key exchange and AES encryption, backed by Java, JDBC, and MySQL for protected healthcare data flow.',
+    techStack: 'Java,MySQL,JDBC,Security,Cryptography',
     githubUrl: 'https://github.com/dineshprabhu-a',
     demoUrl: '#',
     image: '🔐',
